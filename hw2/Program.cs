@@ -19,8 +19,24 @@ Console.WriteLine("Enter a number:");
 num = int.Parse(Console.ReadLine());
 if (num < 100) {
     Console.WriteLine("The number {0} don't have the third digit.", num);
-    return;
 } else {
     int third_digit = (num / 100) % 10;
     Console.WriteLine("The third digit is {0}.", third_digit);
 }
+
+
+// Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую
+// день недели, и проверяет, является ли этот день выходным.
+Console.WriteLine("Task 15:");
+Console.WriteLine("Enter a digit the number of the day of the week:");
+num = int.Parse(Console.ReadLine());
+if (num >= 1 && num <= 7) {
+    if (num == 6 || num == 7) {
+        Console.WriteLine("The {0} day of the week is weekend.", num);
+    } else {
+        Console.WriteLine("The {0} day of the week is not weekend.", num);
+    }
+} else {
+    Console.WriteLine("Incorrect number {0}.", num);
+}
+
